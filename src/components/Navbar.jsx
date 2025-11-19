@@ -1,23 +1,25 @@
 import Image from "next/image";
 import React from "react";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   return (
     <div>
-      <nav className="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-b border-default">
+      <nav className="bg-white fixed w-full z-20 top-0 start-0 shadow-md border-b border-gray-200">
         <div className="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
             href="https://flowbite.com/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <Image
-              src={"https://flowbite.com/docs/images/logo.svg"}
+              src={logo}
               alt="FLowbite"
-              width={20}
-              height={20}
+              width="auto"
+              height="auto"
+              className="w-full h-12 object-center"
             />
             <span className="self-center text-xl text-heading font-semibold whitespace-nowrap">
-              Flowbite
+              CodeArcUs
             </span>
           </a>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
