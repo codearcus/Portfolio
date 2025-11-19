@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import About from "@/components/sections/about";
+
 
 export const metadata = {
   title: "Code Arcus",
@@ -18,7 +20,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={poppins.className}>
         <Navbar />
+         
         {children}
+        <About/>
       </body>
     </html>
   );
