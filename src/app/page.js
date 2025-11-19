@@ -65,7 +65,7 @@ export default function Home() {
           </motion.p>
         </motion.div>
 
-        {/* Image Animation */}
+        
         <motion.div
           className="w-full md:w-auto flex justify-center"
           initial={{ opacity: 0, scale: 0.8 }}
