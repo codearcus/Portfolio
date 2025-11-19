@@ -25,7 +25,7 @@ export default function Home() {
           gap-10 md:gap-16
         "
       >
-        {/* Text Section Animation */}
+       
         <motion.div
           className="max-w-xl pt-5 text-center md:text-left"
           initial={{ opacity: 0, y: 40 }}
