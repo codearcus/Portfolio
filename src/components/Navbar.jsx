@@ -1,8 +1,16 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { use } from "react";
 import logo from "../assets/logo.png";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Navbar = () => {
+  const pathname = usePathname();
+
+  const isActive = (path) => pathname === path;
+
   return (
     <div>
       <nav className="bg-white fixed w-full z-20 top-0 start-0 shadow-md border-b border-gray-200">
@@ -60,38 +68,54 @@ const Navbar = () => {
             id="navbar-sticky"
           >
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-default rounded-base bg-neutral-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary ">
-              <li className="hover:scale-110 hover:transition-transform duration-300">
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-heading bg-brand rounded-sm md:bg-transparent md:text-fg-brand md:p-0"
-                  aria-current="page"
+              <li className="hover:scale-110 hover:transition-transform duration-300 hover:text-blue-500 hover:font-medium">
+                <Link
+                  href="/"
+                  className={`block py-2 px-3 rounded-sm md:bg-transparent md:p-0 ${
+                    isActive("/") ? "text-blue-600 font-bold" : "text-heading"
+                  }`}
                 >
                   Home
-                </a>
+                </Link>
               </li>
-              <li className="hover:scale-110 hover:transition-transform duration-300">
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+
+              <li className="hover:scale-110 hover:transition-transform duration-300 hover:text-blue-500 hover:font-medium">
+                <Link
+                  href="/about"
+                  className={`block py-2 px-3 rounded-sm md:p-0 ${
+                    isActive("/about")
+                      ? "text-blue-600 font-bold"
+                      : "text-heading"
+                  }`}
                 >
                   About
-                </a>
+                </Link>
               </li>
-              <li className="hover:scale-110 hover:transition-transform duration-300">
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+
+              <li className="hover:scale-110 hover:transition-transform duration-300 hover:text-blue-500 hover:font-medium">
+                <Link
+                  href="/service"
+                  className={`block py-2 px-3 rounded-sm md:p-0 ${
+                    isActive("/service")
+                      ? "text-blue-600 font-bold"
+                      : "text-heading"
+                  }`}
                 >
                   Services
-                </a>
+                </Link>
               </li>
-              <li className="hover:scale-110 hover:transition-transform duration-300">
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+
+              <li className="hover:scale-110 hover:transition-transform duration-300 hover:text-blue-500 hover:font-medium">
+                <Link
+                  href="/contact"
+                  className={`block py-2 px-3 rounded-sm md:p-0 ${
+                    isActive("/contact")
+                      ? "text-blue-600 font-bold"
+                      : "text-heading"
+                  }`}
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
