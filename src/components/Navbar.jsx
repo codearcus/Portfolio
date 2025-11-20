@@ -10,16 +10,14 @@ const Navbar = () => {
   const pathname = usePathname();
   const isActive = (path) => pathname === path;
 
-  const [open, setOpen] = useState(false); // SIDEBAR STATE
+  const [open, setOpen] = useState(false);
 
   return (
     <>
-      {/* ------------------ SIDEBAR (Mobile Sliding) ------------------ */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-40 transform transition-transform duration-300 
           ${open ? "translate-x-0" : "-translate-x-full"}`}
       >
-        {/* Sidebar Header */}
         <div className="flex items-center justify-between p-4 border-b">
           <Link
             href="/"
@@ -74,7 +72,6 @@ const Navbar = () => {
         </nav>
       </div>
 
-      {/* ------------------ OVERLAY ------------------ */}
       {open && (
         <div
           className="fixed inset-0 bg-black/30 z-30"
@@ -82,7 +79,6 @@ const Navbar = () => {
         />
       )}
 
-      {/* ------------------ TOP NAVBAR ------------------ */}
       <nav className="bg-white fixed w-full z-20 top-0 start-0 shadow-md border-b border-gray-200">
         <div className="max-w-7xl flex items-center justify-between mx-auto p-4">
           <Link href="/" className="flex items-center space-x-3 ">
@@ -98,7 +94,6 @@ const Navbar = () => {
               Get started
             </button>
 
-            {/* HAMBURGER BUTTON - Opens sidebar */}
             <button
               type="button"
               onClick={() => setOpen(true)}
@@ -120,13 +115,12 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Desktop Links */}
           <div className="hidden md:flex space-x-8">
             <Link
               href="/"
               className={`${
                 isActive("/") ? "text-blue-600 font-bold" : "text-heading"
-              }`}
+              } hover:scale-110 hover:transition-transform duration-300 hover:text-blue-500 hover:font-medium`}
             >
               Home
             </Link>
@@ -135,7 +129,7 @@ const Navbar = () => {
               href="/about"
               className={`${
                 isActive("/about") ? "text-blue-600 font-bold" : "text-heading"
-              }`}
+              } hover:scale-110 hover:transition-transform duration-300 hover:text-blue-500 hover:font-medium`}
             >
               About
             </Link>
@@ -146,7 +140,7 @@ const Navbar = () => {
                 isActive("/service")
                   ? "text-blue-600 font-bold"
                   : "text-heading"
-              }`}
+              } hover:scale-110 hover:transition-transform duration-300 hover:text-blue-500 hover:font-medium`}
             >
               Services
             </Link>
@@ -157,7 +151,7 @@ const Navbar = () => {
                 isActive("/contact")
                   ? "text-blue-600 font-bold"
                   : "text-heading"
-              }`}
+              } hover:scale-110 hover:transition-transform duration-300 hover:text-blue-500 hover:font-medium`}
             >
               Contact
             </Link>
