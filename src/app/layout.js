@@ -2,6 +2,9 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import About from "@/components/sections/about";
+import Services from "@/components/sections/Services";
+import Contact from "@/components/sections/Contact";
+
 
 
 export const metadata = {
@@ -23,6 +26,8 @@ export default function RootLayout({ children }) {
          
         {children}
         <About/>
+        <Services/>
+        <Contact/>
       </body>
     </html>
   );
