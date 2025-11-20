@@ -2,9 +2,6 @@
 import Image from "next/image";
 import home from "../assets/home.jpg";
 import { motion } from "framer-motion";
-import About from "@/components/sections/about";
-import Contact from "@/components/sections/Contact";
-import ServicesPage from "@/components/sections/Services";
 
 export default function Home() {
   return (
@@ -75,7 +72,7 @@ export default function Home() {
           >
             <Image
               src={home}
-              width={800}
+              width={700}
               height={600}
               alt="home image"
               className="
@@ -87,9 +84,6 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
-      <About />
-      <ServicesPage />
-      <Contact />
     </div>
   );
 }

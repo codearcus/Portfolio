@@ -120,7 +120,7 @@ const Navbar = () => {
               href="/"
               className={`${
                 isActive("/") ? "text-blue-600 font-bold" : "text-heading"
-              } hover:scale-110 hover:transition-transform duration-300 hover:text-blue-500 hover:font-medium`}
+              } hover:scale-110 hover:transition-transform duration-300 hover:text-blue-500 `}
             >
               Home
             </Link>
@@ -129,7 +129,7 @@ const Navbar = () => {
               href="/about"
               className={`${
                 isActive("/about") ? "text-blue-600 font-bold" : "text-heading"
-              } hover:scale-110 hover:transition-transform duration-300 hover:text-blue-500 hover:font-medium`}
+              } hover:scale-110 hover:transition-transform duration-300 hover:text-blue-500 `}
             >
               About
             </Link>
@@ -140,7 +140,7 @@ const Navbar = () => {
                 isActive("/service")
                   ? "text-blue-600 font-bold"
                   : "text-heading"
-              } hover:scale-110 hover:transition-transform duration-300 hover:text-blue-500 hover:font-medium`}
+              } hover:scale-110 hover:transition-transform duration-300 hover:text-blue-500 `}
             >
               Services
             </Link>
@@ -151,7 +151,7 @@ const Navbar = () => {
                 isActive("/contact")
                   ? "text-blue-600 font-bold"
                   : "text-heading"
-              } hover:scale-110 hover:transition-transform duration-300 hover:text-blue-500 hover:font-medium`}
+              } hover:scale-110 hover:transition-transform duration-300 hover:text-blue-500 `}
             >
               Contact
             </Link>
