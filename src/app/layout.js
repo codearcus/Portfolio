@@ -1,9 +1,7 @@
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import About from "@/components/sections/about";
-import Services from "@/components/sections/Services";
-import Contact from "@/components/sections/Contact";
+import Footer from "@/components/Footer"; 
 
 
 
@@ -25,9 +23,9 @@ export default function RootLayout({ children }) {
         <Navbar />
          
         {children}
-        <About/>
-        <Services/>
-        <Contact/>
+
+        <Footer />  
+
       </body>
     </html>
   );
