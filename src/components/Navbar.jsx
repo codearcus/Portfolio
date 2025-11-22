@@ -25,7 +25,7 @@ const Navbar = () => {
             className="flex items-center space-x-3"
           >
             <Image src={logo} width={40} height={40} alt="logo" />
-            <span className="text-xl font-bold text-[#02223e]">CodeArcUs</span>
+            <span className="text-xl font-bold">CodeArcUs</span>
           </Link>
         </div>
 
@@ -81,11 +81,9 @@ const Navbar = () => {
 
       <nav className="bg-white fixed w-full z-20 top-0 start-0 shadow-md border-b border-gray-200">
         <div className="max-w-7xl flex items-center justify-between mx-auto p-4">
-          <Link href="/" className="flex items-end space-x-3 ">
+          <Link href="/" className="flex items-center space-x-3 ">
             <Image src={logo} width={40} height={40} alt="logo" />
-            <span className="text-xl font-semibold text-[#02223e]">
-              CodeArcUs
-            </span>
+            <span className="text-xl font-semibold">CodeArcUs</span>
           </Link>
 
           <div className="flex md:order-2 space-x-3 md:space-x-0">
