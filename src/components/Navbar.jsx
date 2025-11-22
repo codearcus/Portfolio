@@ -29,47 +29,40 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <nav className="flex flex-col p-4 gap-6 text-lg">
-          <Link
-            href="/"
-            onClick={() => setOpen(false)}
-            className={`${
-              isActive("/") ? "text-blue-600 font-bold" : "text-gray-700"
-            }`}
-          >
-            Home
-          </Link>
+       <nav className="flex flex-col p-4 gap-6 text-lg">
+  <Link
+    href="/"
+    onClick={() => setOpen(false)}
+    className={`${isActive("/") ? "text-blue-600 font-bold" : "text-gray-700"}`}
+  >
+    Home
+  </Link>
 
-          <Link
-            href="/about"
-            onClick={() => setOpen(false)}
-            className={`${
-              isActive("/about") ? "text-blue-600 font-bold" : "text-gray-700"
-            }`}
-          >
-            About
-          </Link>
+  <Link
+    href="/about"
+    onClick={() => setOpen(false)}
+    className={`${isActive("/about") ? "text-blue-600 font-bold" : "text-gray-700"}`}
+  >
+    About
+  </Link>
 
-          <Link
-            href="/service"
-            onClick={() => setOpen(false)}
-            className={`${
-              isActive("/service") ? "text-blue-600 font-bold" : "text-gray-700"
-            }`}
-          >
-            Services
-          </Link>
+  <Link
+    href="/service"    // ✔ Change to /services if your folder is /services
+    onClick={() => setOpen(false)}
+    className={`${isActive("/service") ? "text-blue-600 font-bold" : "text-gray-700"}`}
+  >
+    Services
+  </Link>
 
-          <Link
-            href="/contact"
-            onClick={() => setOpen(false)}
-            className={`${
-              isActive("/contact") ? "text-blue-600 font-bold" : "text-gray-700"
-            }`}
-          >
-            Contact
-          </Link>
-        </nav>
+  <Link
+    href="/contact"
+    onClick={() => setOpen(false)}
+    className={`${isActive("/contact") ? "text-blue-600 font-bold" : "text-gray-700"}`}
+  >
+    Contact
+  </Link>
+</nav>
+
       </div>
 
       {open && (
