@@ -2,6 +2,7 @@
 import Image from "next/image";
 import home from "../assets/home.jpg";
 import { motion } from "framer-motion";
+import WalkingMan from "@/components/WalkingMan";
 
 export default function Home() {
   return (
@@ -192,46 +193,24 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ---------------------- TECH STACK ---------------------- */}
-     {/* ---------------------- TECH STACK ---------------------- */}
-<div className="py-20 px-6 md:px-20 bg-gray-50">
+ {/* ---------------------- TECH STACK ---------------------- */}
+<div 
+  id="tech-stack-section"
+  className="py-20 px-6 md:px-20 bg-gray-50 relative overflow-hidden"
+>
   <h2 className="text-center text-4xl font-extrabold mb-12">
     Our <span className="text-blue-600">Tech Stack</span>
   </h2>
 
   <div className="flex flex-wrap justify-center gap-10">
-
-    {/* Tech Items with Logos */}
     {[
-      {
-        name: "React",
-        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-      },
-      {
-        name: "Next.js",
-        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-      },
-      {
-        name: "Node.js",
-        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-      },
-      {
-        name: "PHP",
-        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-      },
-      {
-        name: "MySQL",
-        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-      },
-      {
-        name: "MongoDB",
-        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-      },
-      {
-  name: "TailwindCSS",
-  logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
-}
-
+      { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+      { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+      { name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+      { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+      { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+      { name: "TailwindCSS", logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" },
     ].map((tech, i) => (
       <motion.div
         key={i}
@@ -246,8 +225,10 @@ export default function Home() {
       </motion.div>
     ))}
   </div>
-</div>
 
+  {/* Walking Man inside this section */}
+  <WalkingMan />
+</div>
 
 
     </div>

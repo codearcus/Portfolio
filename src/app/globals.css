@@ -5,3 +5,29 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+.walking-man-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 140px;
+  bottom: -14px; /* 🔥 ADJUST THIS TO PLACE MAN EXACTLY ON THE LINE */
+  z-index: 50;
+  pointer-events: none;
+}
+
+.walking-gif {
+  width: 100%;
+}
+
+/* Animation stays same */
+.man-walk {
+  animation: walkAcross 20s linear forwards;
+}
+
+@keyframes walkAcross {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(120vw); }
+}
+
+
