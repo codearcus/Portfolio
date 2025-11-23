@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ServiceSlider from "@/components/ServiceSlider";
+
 
 const services = [
   {
@@ -133,8 +135,11 @@ export default function ServicesPage() {
           We cover the full digital spectrum – from building your online
           presence to driving traffic and conversions.
         </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+           {/* ================= SERVICE SLIDER SECTION ================= */}
+<div className="px-6 md:px-20 mb-20">
+  <ServiceSlider />
+</div>
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, i) => (
             <motion.div
               key={service.name}
@@ -157,7 +162,7 @@ export default function ServicesPage() {
               <p className="text-sm text-gray-600">{service.tagline}</p>
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </section>
 
       {/* ================= INDIVIDUAL SERVICE SECTIONS ================= */}
