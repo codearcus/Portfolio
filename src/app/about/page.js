@@ -39,7 +39,7 @@ export default function About() {
   ];
 
   return (
-    <div className="space-y-32 pt-24">
+    <div className="space-y-32 pt-24 container mx-auto">
       {/* ---------------------- OUR STORY ---------------------- */}
       <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20">
         <motion.div
