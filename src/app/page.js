@@ -3,6 +3,7 @@ import Image from "next/image";
 import home from "../assets/home.jpg";
 import { motion } from "framer-motion";
 import WalkingMan from "@/components/WalkingMan";
+import InfiniteSlider from "@/components/InfiniteSlider";
 
 export default function Home() {
   const testimonials = [
@@ -50,7 +51,7 @@ export default function Home() {
     },
   ];
 
-  const techStack = [
+  const row1 = [
     {
       name: "React",
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
@@ -64,20 +65,75 @@ export default function Home() {
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     },
     {
-      name: "PHP",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-    },
-    {
-      name: "MySQL",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+      name: "Express.js",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     },
     {
       name: "MongoDB",
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     },
     {
-      name: "TailwindCSS",
-      logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+      name: "MySQL",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    },
+    {
+      name: "PostgreSQL",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+    },
+    {
+      name: "Bootstrap",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+    },
+    {
+      name: "Java",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+    },
+    {
+      name: "Spring Boot",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+    },
+  ];
+
+  const row2 = [
+    {
+      name: "Expo",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/expo/expo-original.svg",
+    },
+    {
+      name: "Firebase",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+    },
+    {
+      name: "TypeScript",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    },
+    {
+      name: "Redux",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+    },
+    {
+      name: "Tailwind CSS",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+    },
+    {
+      name: "HTML5",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    },
+    {
+      name: "CSS3",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    },
+    {
+      name: "Vue.js",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+    },
+    {
+      name: "GitHub",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    },
+    {
+      name: "GitLab",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg",
     },
   ];
 
@@ -271,33 +327,14 @@ export default function Home() {
           Our <span className="text-blue-600">Tech Stack</span>
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-10">
-          {techStack.map((tech, i) => (
-            <motion.div
-              key={i}
-              className="p-6 bg-white shadow-lg rounded-xl text-center w-36 hover:scale-110 transition cursor-pointer"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{
-                duration: 0.6,
-                delay: i * 0.15,
-                ease: [0.25, 0.46, 0.45, 0.94], // smooth cubic bezier
-              }}
-            >
-              <Image
-                width={64}
-                height={64}
-                src={tech.logo}
-                alt={tech.name}
-                className="w-16 h-16 mx-auto mb-3"
-              />
-              <p className="text-lg font-semibold">{tech.name}</p>
-            </motion.div>
-          ))}
+        <div className="space-y-12">
+          {/* Row 1 - slide left to right */}
+          <InfiniteSlider items={row1} reverse={true} speed={20} />
+
+          {/* Row 2 - slide right to left */}
+          <InfiniteSlider items={row2} reverse={true} speed={40} />
         </div>
 
-        {/* Walking Man inside this section */}
         <WalkingMan />
       </section>
     </div>
