@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { useState, useEffect } from "react";
@@ -40,10 +41,9 @@ export default function ServiceSlider() {
   }, []);
 
   return (
-    <div className="w-full flex justify-center py-10 px-4">
+    <div className="w-full flex items-center justify-center px-4 md:px-0">
       {/* CARD ONLY — No outer background */}
-      <div className="relative w-full max-w-5xl bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.08)] p-10 min-h-[380px] flex">
-
+      <div className="relative w-full bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.08)] p-10 min-h-[380px] flex">
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
@@ -82,7 +82,6 @@ export default function ServiceSlider() {
             </div>
           </motion.div>
         </AnimatePresence>
-
       </div>
     </div>
   );

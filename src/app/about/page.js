@@ -4,11 +4,44 @@ import Image from "next/image";
 import aboutImg from "../../assets/about.jpg";
 
 export default function About() {
+  const services = [
+    {
+      title: "Website Development",
+      desc: "Custom websites with modern UI and high performance.",
+    },
+    {
+      title: "Mobile App Development",
+      desc: "iOS & Android apps that users love.",
+    },
+    {
+      title: "SEO Optimization",
+      desc: "Rank faster and get more traffic organically.",
+    },
+    {
+      title: "Digital Marketing",
+      desc: "Grow your brand through targeted digital campaigns.",
+    },
+  ];
+
+  const missionValues = [
+    {
+      title: "Innovation",
+      desc: "We build creative, scalable, modern solutions for future-ready businesses.",
+    },
+    {
+      title: "Trust",
+      desc: "We believe in transparency, honesty, and long-term partnerships.",
+    },
+    {
+      title: "Excellence",
+      desc: "Quality is at the heart of everything we deliver. Always.",
+    },
+  ];
+
   return (
     <div className="space-y-32 pt-24">
-
       {/* ---------------------- OUR STORY ---------------------- */}
-      <section className="flex flex-col md:flex-row items-center gap-16 px-6 md:px-20">
+      <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20">
         <motion.div
           className="max-w-xl"
           initial={{ opacity: 0, x: -40 }}
@@ -20,9 +53,10 @@ export default function About() {
             Our <span className="text-blue-600">Story</span>
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            CodeArcUs was founded with a simple mission — empowering brands through 
-            modern digital solutions. What started as a small creative team has grown 
-            into a full-service development studio helping businesses globally.
+            CodeArcUs was founded with a simple mission — empowering brands
+            through modern digital solutions. What started as a small creative
+            team has grown into a full-service development studio helping
+            businesses globally.
           </p>
         </motion.div>
 
@@ -49,20 +83,7 @@ export default function About() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {[
-            {
-              title: "Innovation",
-              desc: "We build creative, scalable, modern solutions for future-ready businesses.",
-            },
-            {
-              title: "Trust",
-              desc: "We believe in transparency, honesty, and long-term partnerships.",
-            },
-            {
-              title: "Excellence",
-              desc: "Quality is at the heart of everything we deliver. Always.",
-            },
-          ].map((item, i) => (
+          {missionValues.map((item, i) => (
             <motion.div
               key={i}
               className="p-8 bg-white shadow rounded-xl"
@@ -85,24 +106,7 @@ export default function About() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {[
-            {
-              title: "Website Development",
-              desc: "Custom websites with modern UI and high performance.",
-            },
-            {
-              title: "Mobile App Development",
-              desc: "iOS & Android apps that users love.",
-            },
-            {
-              title: "SEO Optimization",
-              desc: "Rank faster and get more traffic organically.",
-            },
-            {
-              title: "Digital Marketing",
-              desc: "Grow your brand through targeted digital campaigns.",
-            },
-          ].map((service, i) => (
+          {services.map((service, i) => (
             <motion.div
               key={i}
               className="p-8 bg-white rounded-xl shadow"
@@ -131,17 +135,20 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          At CodeArcUs, we believe in collaboration, creativity, and continuous learning. 
-          Our environment encourages sharing ideas, experimenting, and pushing boundaries — 
-          always putting the user first.
+          At CodeArcUs, we believe in collaboration, creativity, and continuous
+          learning. Our environment encourages sharing ideas, experimenting, and
+          pushing boundaries — always putting the user first.
         </motion.p>
       </section>
 
       {/* ---------------------- CTA SECTION ---------------------- */}
-      <section className="px-6 md:px-20 text-center py-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl text-white">
-        <h2 className="text-4xl font-extrabold mb-6">Ready to Build Something Great?</h2>
+      <section className="px-6 md:px-20 text-center py-20 bg-linear-to-r from-blue-600 to-purple-600 rounded-xl text-white">
+        <h2 className="text-4xl font-extrabold mb-6">
+          Ready to Build Something Great?
+        </h2>
         <p className="max-w-2xl mx-auto text-lg mb-8">
-          Let’s turn your ideas into powerful digital products. Reach out and let’s get started.
+          Let’s turn your ideas into powerful digital products. Reach out and
+          let’s get started.
         </p>
         <a
           href="/contact"
@@ -150,7 +157,6 @@ export default function About() {
           Contact Us
         </a>
       </section>
-
     </div>
   );
 }

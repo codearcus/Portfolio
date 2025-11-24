@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import ServiceSlider from "@/components/ServiceSlider";
-
+import Image from "next/image";
 
 const services = [
   {
@@ -72,7 +72,7 @@ const faqs = [
 
 export default function ServicesPage() {
   return (
-    <div className="pt-24 md:pt-32 pb-24 bg-white">
+    <div className="container mx-auto pt-24 md:pt-32 pb-24 bg-white">
       {/* ================= HERO SECTION ================= */}
       <section className="px-6 md:px-20 mb-20">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
@@ -105,7 +105,7 @@ export default function ServicesPage() {
 
           {/* Hero Highlight Card */}
           <motion.div
-            className="w-full md:w-[380px] bg-gradient-to-br from-blue-600 to-indigo-700 text-white rounded-3xl p-8 shadow-2xl"
+            className="w-full md:w-[380px] bg-linear-to-br from-blue-600 to-indigo-700 text-white rounded-3xl p-8 shadow-2xl"
             initial={{ opacity: 0, scale: 0.85, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
@@ -135,10 +135,10 @@ export default function ServicesPage() {
           We cover the full digital spectrum – from building your online
           presence to driving traffic and conversions.
         </p>
-           {/* ================= SERVICE SLIDER SECTION ================= */}
-<div className="px-6 md:px-20 mb-20">
-  <ServiceSlider />
-</div>
+        {/* ================= SERVICE SLIDER SECTION ================= */}
+        <div className="xl:px-20 mb-20">
+          <ServiceSlider />
+        </div>
         {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, i) => (
             <motion.div
@@ -185,9 +185,11 @@ export default function ServicesPage() {
             >
               {/* Left "logo" block */}
               <div
-                className={`w-full md:w-1/3 bg-gradient-to-br ${service.color} rounded-3xl p-8 flex flex-col items-center justify-center text-white shadow-lg`}
+                className={`w-full md:w-1/3 bg-linear-to-b ${service.color} rounded-3xl p-8 flex flex-col items-center justify-center text-white shadow-lg`}
               >
-                <img
+                <Image
+                  width={64}
+                  height={64}
                   src={service.logo}
                   alt={service.name}
                   className="w-16 h-16 mb-4 object-contain"

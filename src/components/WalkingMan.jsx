@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function WalkingMan() {
@@ -20,9 +21,11 @@ export default function WalkingMan() {
         pointer-events-none
         ${start ? "man-walk" : ""}
       `}
-      style={{ bottom: "-5px" }} 
+      style={{ bottom: "-5px" }}
     >
-      <img
+      <Image
+        width={64}
+        height={64}
         src="/walking-boy.gif"
         className="w-[120px]"
         alt="walking man"

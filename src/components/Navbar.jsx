@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { Home, User, Briefcase, Mail } from "lucide-react";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -15,9 +16,11 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-40 transform transition-transform duration-300 
-          ${open ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-2xl z-40 flex flex-col
+    transform transition-transform duration-300 
+    ${open ? "translate-x-0" : "-translate-x-full"}`}
       >
+        {/* Header */}
         <div className="flex items-center justify-between p-4 border-b">
           <Link
             href="/"
@@ -29,47 +32,70 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <nav className="flex flex-col p-4 gap-6 text-lg">
+        {/* Navigation */}
+        <nav className="flex flex-col p-5 gap-5 text-lg ">
           <Link
             href="/"
             onClick={() => setOpen(false)}
-            className={`${
-              isActive("/") ? "text-blue-600 font-bold" : "text-gray-700"
-            }`}
+            className={`flex items-center gap-3 p-2 rounded-lg transition-all
+        ${
+          isActive("/")
+            ? "text-blue-600 font-semibold bg-blue-50"
+            : "text-gray-700 hover:bg-gray-100"
+        }`}
           >
+            <Home size={20} />
             Home
           </Link>
 
           <Link
             href="/about"
             onClick={() => setOpen(false)}
-            className={`${
-              isActive("/about") ? "text-blue-600 font-bold" : "text-gray-700"
-            }`}
+            className={`flex items-center gap-3 p-2 rounded-lg transition-all
+        ${
+          isActive("/about")
+            ? "text-blue-600 font-semibold bg-blue-50"
+            : "text-gray-700 hover:bg-gray-100"
+        }`}
           >
+            <User size={20} />
             About
           </Link>
 
           <Link
             href="/service"
             onClick={() => setOpen(false)}
-            className={`${
-              isActive("/service") ? "text-blue-600 font-bold" : "text-gray-700"
-            }`}
+            className={`flex items-center gap-3 p-2 rounded-lg transition-all
+        ${
+          isActive("/service")
+            ? "text-blue-600 font-semibold bg-blue-50"
+            : "text-gray-700 hover:bg-gray-100"
+        }`}
           >
+            <Briefcase size={20} />
             Services
           </Link>
 
           <Link
             href="/contact"
             onClick={() => setOpen(false)}
-            className={`${
-              isActive("/contact") ? "text-blue-600 font-bold" : "text-gray-700"
-            }`}
+            className={`flex items-center gap-3 p-2 rounded-lg transition-all
+        ${
+          isActive("/contact")
+            ? "text-blue-600 font-semibold bg-blue-50"
+            : "text-gray-700 hover:bg-gray-100"
+        }`}
           >
+            <Mail size={20} />
             Contact
           </Link>
         </nav>
+
+        {/* Footer */}
+        <div className="p-4 border-t text-center text-sm text-gray-500 mt-auto">
+          <p>© {new Date().getFullYear()} CodeArcUs</p>
+          <p className="text-xs">All rights reserved.</p>
+        </div>
       </div>
 
       {open && (
@@ -89,7 +115,7 @@ const Navbar = () => {
           <div className="flex md:order-2 space-x-3 md:space-x-0">
             <button
               type="button"
-              className=" bg-blue-200 hover:bg-blue-500 rounded-2xl px-3 py-2 text-sm"
+              className=" bg-blue-200 hover:bg-blue-500 rounded-2xl px-3 py-2 text-sm  md:block hidden"
             >
               Get started
             </button>
