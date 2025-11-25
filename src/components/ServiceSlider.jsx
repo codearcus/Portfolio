@@ -15,7 +15,7 @@ export default function ServiceSlider() {
     {
       title: "App Development",
       description: "Beautiful Android mobile apps using modern tech.",
-      image: "/service2.jpg",
+      image: "/AppService.jpg",
     },
     {
       title: "Digital Marketing",
@@ -31,7 +31,6 @@ export default function ServiceSlider() {
 
   const [index, setIndex] = useState(0);
 
-  // 🔄 Auto-slide every 1 second
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((i) => (i + 1) % services.length);

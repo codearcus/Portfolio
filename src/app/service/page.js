@@ -139,30 +139,6 @@ export default function ServicesPage() {
         <div className="xl:px-20 mb-20">
           <ServiceSlider />
         </div>
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, i) => (
-            <motion.div
-              key={service.name}
-              className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl hover:-translate-y-1 transition"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.15, duration: 0.6 }}
-            >
-              <div
-                className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4`}
-              >
-                <img
-                  src={service.logo}
-                  alt={service.name}
-                  className="w-9 h-9 object-contain"
-                />
-              </div>
-              <h3 className="font-bold text-lg mb-2">{service.name}</h3>
-              <p className="text-sm text-gray-600">{service.tagline}</p>
-            </motion.div>
-          ))}
-        </div> */}
       </section>
 
       {/* ================= INDIVIDUAL SERVICE SECTIONS ================= */}

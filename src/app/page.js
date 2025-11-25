@@ -327,12 +327,12 @@ export default function Home() {
           Our <span className="text-blue-600">Tech Stack</span>
         </h2>
 
-        <div className="space-y-12">
+        <div className="space-y-2">
           {/* Row 1 - slide left to right */}
           <InfiniteSlider items={row1} reverse={true} speed={20} />
 
           {/* Row 2 - slide right to left */}
-          <InfiniteSlider items={row2} reverse={true} speed={40} />
+          <InfiniteSlider items={row2} reverse={false} speed={20} />
         </div>
 
         <WalkingMan />
