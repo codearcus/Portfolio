@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import ServiceSlider from "@/components/ServiceSlider";
 import Image from "next/image";
-
+import Link from "next/link";
 const services = [
   {
     name: "Website Development",
@@ -94,12 +94,19 @@ export default function ServicesPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <button className="px-6 py-3 rounded-full bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition">
-                Get a Free Consultation
-              </button>
-              <button className="px-6 py-3 rounded-full border border-blue-600 text-blue-600 font-semibold hover:bg-blue-50 transition">
-                View Pricing
-              </button>
+             <Link
+  href="/contact"
+  className="px-6 py-3 rounded-full bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition"
+>
+  Get a Free Consultation
+</Link>
+
+<Link
+  href="/#pricing"
+  className="px-6 py-3 rounded-full border border-blue-600 text-blue-600 font-semibold hover:bg-blue-50 transition"
+>
+  View Pricing
+</Link>
             </div>
           </motion.div>
 

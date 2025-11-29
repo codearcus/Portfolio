@@ -41,9 +41,9 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-semibold text-blue-600 mb-4">Contact Us</h3>
           <ul className="space-y-3 text-sm">
-            <li>📍 123, Tech Street, Chennai</li>
-            <li>📞 +91 98765 43210</li>
-            <li>📧 support@codearcus.com</li>
+            <li>📍 Pudukottai</li>
+            {/* <li>📞 +91 98765 43210</li> */}
+            <li>📧 codearcus17@gmail.com</li>
           </ul>
         </div>
 

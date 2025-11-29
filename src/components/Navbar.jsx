@@ -113,12 +113,12 @@ const Navbar = () => {
           </Link>
 
           <div className="flex md:order-2 space-x-3 md:space-x-0">
-            <button
-              type="button"
-              className=" bg-blue-200 hover:bg-blue-500 rounded-2xl px-3 py-2 text-sm  md:block hidden"
-            >
-              Get started
-            </button>
+           <Link
+  href="/contact"
+  className=" bg-blue-200 hover:bg-blue-500 rounded-2xl px-3 py-2 text-sm md:block hidden"
+>
+  Get started
+</Link>
 
             <button
               type="button"

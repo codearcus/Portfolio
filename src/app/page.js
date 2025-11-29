@@ -36,17 +36,17 @@ export default function Home() {
   const pricing = [
     {
       title: "Basic",
-      price: "₹3,***",
+      // price: "₹3,***",
       features: ["Static Website", "3-8 Pages", "Basic SEO"],
     },
     {
       title: "Standard",
-      price: "₹6,***",
+      // price: "₹6,***",
       features: ["Dynamic Website", "6-12 Pages", "Advanced SEO"],
     },
     {
       title: "Premium",
-      price: "₹**,499",
+      // price: "₹**,499",
       features: ["Full Website", "Unlimited Pages", "Marketing Support"],
     },
   ];
@@ -285,7 +285,7 @@ export default function Home() {
       </section>
 
       {/* ---------------------- PRICING PLANS ---------------------- */}
-      <section className="py-20 px-6 md:px-20">
+      <section id="pricing" className="py-20 px-6 md:px-20">
         <h2 className="text-center text-4xl font-extrabold mb-12">
           Our <span className="text-blue-600">Pricing</span>
         </h2>
